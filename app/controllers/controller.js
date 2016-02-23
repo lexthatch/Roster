@@ -1,4 +1,4 @@
-app.controller('RosterController', function ($scope, DataService) {
+app.controller('RosterController', function ($scope, DataService, $filter) {
     $scope.players = [];
 
      $scope.loadPlayers = function () {
