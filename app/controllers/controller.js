@@ -3,7 +3,7 @@ app.controller('RosterController', function ($scope, DataService) {
 
      $scope.loadPlayers = function () {
         DataService.loadPlayers();
-        console.log();
+        
      },
      $scope.setPlayers = function(){
          $scope.players = DataService.getAllPlayers();
