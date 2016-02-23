@@ -5,6 +5,11 @@ app.controller('RosterController', function ($scope, DataService) {
         DataService.loadPlayers();
         console.log();
      },
+     $scope.setPlayers = function(){
+         $scope.players = DataService.getAllPlayers();
+         console.log($scope.players);
+     }
+     
     $scope.roster = [];
 
     $scope.addPlayer = function () {
@@ -16,6 +21,12 @@ app.controller('RosterController', function ($scope, DataService) {
         }
 
         $scope.roster.push(player);
+    };
+    $scope.removePlayer = function () {
+        
+    };
+    $scope.getPlayersByTeam = function(){
+        $scope.players = $filter('filter')($scope.players, {pro_team: $scope.team});
     }
 
-})
+});
