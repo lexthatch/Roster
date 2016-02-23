@@ -1,24 +1,24 @@
 app.controller('RosterController', function ($scope) {
-    $scope.players = [];
+    // $scope.players = [];
 
-    $scope.addPlayer = function () {
+    // $scope.addPlayer = function () {
+    //   debugger;
+    //     var player = {
+    //         name: $scope.playerName,
+    //         position: $scope.playerPosition,
+    //         number: $scope.playerNumber,
+    //     }
 
-        var player = {
-            name: $scope.playerName,
-            position: $scope.playerPosition,
-            number = $scope.playerNumber,
-        }
-
-        $scope.players.push(player);
-    }
+    //     $scope.players.push(player);
+    // }
     $scope.roster = [];
-    
+
     $scope.addPlayer = function () {
-        
+      //debugger; // don't be afraid to use this
         var player = {
             name: $scope.playerName,
             position: $scope.playerPosition,
-            number = $scope.playerNumber,
+            number: $scope.playerNumber,
         }
 
         $scope.roster.push(player);
