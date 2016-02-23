@@ -1,16 +1,10 @@
-app.controller('RosterController', function ($scope) {
-    // $scope.players = [];
+app.controller('RosterController', function ($scope, DataService) {
+    $scope.players = [];
 
-    // $scope.addPlayer = function () {
-    //   debugger;
-    //     var player = {
-    //         name: $scope.playerName,
-    //         position: $scope.playerPosition,
-    //         number: $scope.playerNumber,
-    //     }
-
-    //     $scope.players.push(player);
-    // }
+     $scope.loadPlayers = function () {
+        DataService.loadPlayers();
+        console.log();
+     },
     $scope.roster = [];
 
     $scope.addPlayer = function () {
