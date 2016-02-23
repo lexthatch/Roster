@@ -9,7 +9,7 @@ app.factory('DataService', function ($http) {
                 players = data.body.players;
             })},
             getAllPlayers: function () {
-            
+            return players;
         },
     getPlayersByTeam: function (team) {
             

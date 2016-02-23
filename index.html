@@ -51,10 +51,10 @@
                         <p> Player Position: </p>
 
                     </div>
-                    <div ng-repeat="player in roster" class="player-card">
-                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
-                        <p> Player Name:{{player.name}} </P>
-                        <p>Player Number:{{player.number}} </P>
+                    <div ng-repeat="player in players" class="player-card">
+                        <img src="{{player.photo}}">
+                        <p> Player Name:{{player.fullname}} </P>
+                        <p>Player Number:{{player.jersey}} </P>
                         <p> Player Position:{{player.position}} </p>
                     </div>
 

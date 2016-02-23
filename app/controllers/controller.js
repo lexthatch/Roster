@@ -21,7 +21,7 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
             number: $scope.playerNumber,
         }
 
-        $scope.roster.push(player);
+        $scope.players.push(player);
     };
 
     $scope.removePlayer = function () {
