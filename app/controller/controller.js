@@ -14,7 +14,7 @@ app.controller('RosterController', function ($scope) {
     $scope.roster = [];
 
     $scope.addPlayer = function () {
-      //debugger; // don't be afraid to use this
+      debugger; // don't be afraid to use this
         var player = {
             name: $scope.playerName,
             position: $scope.playerPosition,

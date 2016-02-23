@@ -16,9 +16,7 @@
             <div class="panel-body">
                 <div class="roster">
                     <h1>My NFL Roster</h1>
-                    <div ng-repeat="item in items">
-                        {{player-card}}
-                    </div>
+
                     <div class="player-card">
                         <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
 
@@ -114,6 +112,12 @@
                         <p>Player Number: </P>
                         <p> Player Position: </p>
 
+                    </div>
+                    <div ng-repeat="player in roster" class="player-card">
+                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
+                        <p> Player Name:{{player.name}} </P>
+                        <p>Player Number:{{player.number}} </P>
+                        <p> Player Position:{{player.position}} </p>
                     </div>
 
                 </div>
