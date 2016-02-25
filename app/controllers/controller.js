@@ -1,5 +1,10 @@
 app.controller('RosterController', function ($scope, DataService, $filter) {
     $scope.players = [];
+    $scope.draftedPlayers = [];
+    
+    $scope.draftPlayer = function(player) {
+        $scope.draftedPlayers.push(player)
+    }
 
     $scope.loadPlayers = function () {
         DataService.loadPlayers();
