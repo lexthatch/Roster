@@ -51,7 +51,7 @@
                         <p> Player Position: </p>
 
                     </div>
-                    <div ng-repeat="player in players" class="player-card">
+                    <div ng-repeat="player in players" class="player-card" ng-show="player.jersey">
                         
                         <img src="{{player.photo}}">
                         <p> Player Name:{{player.fullname}} </P>

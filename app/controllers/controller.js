@@ -21,9 +21,10 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
     $scope.addPlayer = function () {
         debugger; // don't be afraid to use this
         var player = {
-            name: $scope.playerName,
+            fullname: $scope.playerName,
             position: $scope.playerPosition,
-            number: $scope.playerNumber,
+            jersey: $scope.playerNumber,
+            photo: "http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"
         }
 
         $scope.players.push(player);
