@@ -65,6 +65,24 @@
         </div>
         <div>
             <div class="panel panel-secondary">
+            <div class="panel-body">
+                <div class="roster">
+                    <h1>Draft Picks</h1>
+
+                    </div>
+                    <div ng-repeat="player in players" class="player-card">
+                        <img src="{{player.photo}}">
+                        <p> Player Name:{{player.fullname}} </P>
+                        <p>Player Number:{{player.jersey}} </P>
+                        <p> Player Position:{{player.position}} </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+            <div class="panel panel-secondary">
 
                 <div class="panel-body">
                     <div class="entry_form">
