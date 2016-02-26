@@ -8,8 +8,19 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
 
     $scope.loadPlayers = function () {
         DataService.loadPlayers();
+        $scope.draftPlayerLoad()
+        
 
-    },
+    }
+    $scope.draftPlayerLoad = function() {
+        $scope.draftedPlayers = JSON.parse(localStorage.getItem("draftees"));
+    }
+     $scope.savePlayers = function () {
+         localStorage.setItem("draftees", JSON.stringify($scope.players));
+       
+
+    }
+    
 
     $scope.setPlayers = function () {
         $scope.players = DataService.getAllPlayers();
