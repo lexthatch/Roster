@@ -13,7 +13,9 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
 
     }
     $scope.draftPlayerLoad = function() {
-        $scope.draftedPlayers = JSON.parse(localStorage.getItem("draftees"));
+       // if your don't have anything in local storage this will return null
+       // set it to an empty array if that's the case
+        $scope.draftedPlayers = JSON.parse(localStorage.getItem("draftees")) || [];
     }
      $scope.savePlayers = function () {
          localStorage.setItem("draftees", JSON.stringify($scope.players));

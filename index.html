@@ -20,19 +20,10 @@
                     <h1>My NFL Roster</h1>
                     <br>
                     <h1>Draft Picks</h1>
-
-
-
-                    <div class="player-card">
-                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
-
-                        <p> Player Name: </P>
-                        <p>Player Number: </P>
-                        <p> Player Position: </p>
-
-                    </div>
-                    <div class="player-card">
-                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
+                    
+                    <!-- Hide these for now -->
+                    <!--<div class="player-card">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/">
 
                         <p> Player Name: </P>
                         <p>Player Number: </P>
@@ -40,7 +31,7 @@
 
                     </div>
                     <div class="player-card">
-                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/">
 
                         <p> Player Name: </P>
                         <p>Player Number: </P>
@@ -48,13 +39,21 @@
 
                     </div>
                     <div class="player-card">
-                        <img src=http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/>
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/">
 
                         <p> Player Name: </P>
                         <p>Player Number: </P>
                         <p> Player Position: </p>
 
                     </div>
+                    <div class="player-card">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/">
+
+                        <p> Player Name: </P>
+                        <p>Player Number: </P>
+                        <p> Player Position: </p>
+
+                    </div>-->
 
                     <div ng-repeat="player in players" class="player-card" ng-show="player.jersey">
 
@@ -65,9 +64,9 @@
                         <!-- in controller they are name, position and number -->
                         <!-- I'd change the controller to match these names -->
                         <!-- since I believe these are the names the API uses -->
-                        <p> Player Name:{{player.fullname}} </P>
-                        <p>Player Number:{{player.jersey}} </P>
-                        <p> Player Position:{{player.position}} </p>
+                        <p> Player Name: {{player.fullname}} </P>
+                        <p>Player Number: {{player.jersey}} </P>
+                        <p> Player Position: {{player.position}} </p>
                         <button ng-click="draftPlayer(player)" style="font-size:24px" type="submit">Draft</button>
                     </div>
 
@@ -84,10 +83,10 @@
 
                     </div>
                     <div ng-repeat="player in draftedPlayers" class="player-card">
-                        <img src="{{player.photo}}">
-                        <p> Player Name:{{player.fullname}} </P>
-                        <p>Player Number:{{player.jersey}} </P>
-                        <p> Player Position:{{player.position}} </p>
+                        <img ng-src="{{player.photo}}">
+                        <p> Player Name: {{player.fullname}} </P>
+                        <p>Player Number: {{player.jersey}} </P>
+                        <p> Player Position: {{player.position}} </p>
                     </div>
 
                 </div>
