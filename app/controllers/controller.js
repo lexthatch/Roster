@@ -19,6 +19,7 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
             name: $scope.playerName,
             position: $scope.playerPosition,
             number: $scope.playerNumber,
+            photo: "http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"
         }
 
         $scope.players.push(player);

@@ -52,7 +52,13 @@
 
                     </div>
                     <div ng-repeat="player in players" class="player-card">
-                        <img src="{{player.photo}}">
+                        <!-- this needs to be ng-src so Angular handles it -->
+                        <!-- There was an error in chrome console -->
+                        <img ng-src="{{player.photo}}">
+                        <!-- These don't match your model names -->
+                        <!-- in controller they are name, position and number -->
+                        <!-- I'd change the controller to match these names -->
+                        <!-- since I believe these are the names the API uses -->
                         <p> Player Name:{{player.fullname}} </P>
                         <p>Player Number:{{player.jersey}} </P>
                         <p> Player Position:{{player.position}} </p>
