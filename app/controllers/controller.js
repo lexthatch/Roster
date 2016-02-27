@@ -1,10 +1,26 @@
 app.controller('RosterController', function ($scope, DataService, $filter) {
     $scope.players = [];
+    $scope.draftedPlayers = [];
+    
+    $scope.draftPlayer = function(player) {
+        $scope.draftedPlayers.push(player)
+    }
 
     $scope.loadPlayers = function () {
         DataService.loadPlayers();
+        $scope.draftPlayerLoad()
+        
 
-    },
+    }
+    $scope.draftPlayerLoad = function() {
+        $scope.draftedPlayers = JSON.parse(localStorage.getItem("draftees"));
+    }
+     $scope.savePlayers = function () {
+         localStorage.setItem("draftees", JSON.stringify($scope.players));
+       
+
+    }
+    
 
     $scope.setPlayers = function () {
         $scope.players = DataService.getAllPlayers();
@@ -16,9 +32,9 @@ app.controller('RosterController', function ($scope, DataService, $filter) {
     $scope.addPlayer = function () {
         debugger; // don't be afraid to use this
         var player = {
-            name: $scope.playerName,
+            fullname: $scope.playerName,
             position: $scope.playerPosition,
-            number: $scope.playerNumber,
+            jersey: $scope.playerNumber,
             photo: "http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"
         }
 
